@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tutorial-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <ion-title size="large">tutorial-list</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-item *ngFor="let item of tutorial">
+      <ion-avatar slot="start">
+        <img alt="{{item.title}}" src="{{fotoProfile}}?sig{{item.id}}" />
+      </ion-avatar>
+      <ion-label
+        >{{item.title}}
+        <p>{{item.description}}</p>
+        <ion-icon name="logo-ionic"></ion-icon>
+        <p>{{item.tanggal}}</p>
+      </ion-label>
+
+      <ion-badge slot="end"> {{item.id}} </ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>
